@@ -7,7 +7,7 @@ class WelcomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Text("hello"),
+        child: Text("HELLO"),
       ),
     );
   }

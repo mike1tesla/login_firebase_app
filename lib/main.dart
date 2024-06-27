@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login/src/features/authentication/screens/onboarding/onboarding_screen.dart';
 import 'package:login/src/features/authentication/screens/splash_screen/splash_screen.dart';
 import 'package:login/src/utils/theme/theme.dart';
 import 'package:get/get.dart';
@@ -16,7 +17,7 @@ class App extends StatelessWidget {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.system,
-      home: SplashScreen(),
+      home: OnboardingScreen(),
     );
   }
 }

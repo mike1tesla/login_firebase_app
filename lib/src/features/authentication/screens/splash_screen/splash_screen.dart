@@ -13,6 +13,9 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     splashController.startAnimation();
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
+
     return Scaffold(
       body: Stack(
         children: [
@@ -56,7 +59,7 @@ class SplashScreen extends StatelessWidget {
           ),
           Obx(
             () => AnimatedPositioned(
-              bottom: MediaQuery.of(context).size.height * 0.35,
+              bottom: height * 0.35,
               right: splashController.animate.value
                   ? 0
                   : -200,
@@ -65,10 +68,10 @@ class SplashScreen extends StatelessWidget {
                 opacity: splashController.animate.value ? 1 : 0,
                 duration: const Duration(milliseconds: 2000),
                 child: SizedBox(
-                  // height: MediaQuery.of(context).size.height,
-                  width: MediaQuery.of(context).size.width,
+                  // height: height,
+                  width: width,
                   child: const Image(
-                    image: AssetImage(splashImage1),
+                    image: AssetImage(splashImage),
                   ),
                 ),
               ),
@@ -77,10 +80,10 @@ class SplashScreen extends StatelessWidget {
           Obx(
             () => AnimatedPositioned(
               bottom: splashController.animate.value ? 50 : 0,
-              left: MediaQuery.of(context).size.width * 0.25,
+              left: width * 0.25,
               duration: const Duration(milliseconds: 2400),
               child: SizedBox(
-                width: MediaQuery.of(context).size.width * 0.5,
+                width: width * 0.5,
                 child: const Image(
                   image: AssetImage(splashTitle),
                 ),
