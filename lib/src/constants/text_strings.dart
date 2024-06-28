@@ -1,3 +1,8 @@
+
+// Generic text
+const String login = "Login";
+const String signup = "Signup";
+
 // Splash
 const String appName = ".appable/";
 const String appTagLine = "Learn to code. \nFree for Everyone";

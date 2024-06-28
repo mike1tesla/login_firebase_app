@@ -1,92 +1,88 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:login/src/common_widgets/fade_in_animation/fade_in_animation_controller.dart';
+import 'package:login/src/common_widgets/fade_in_animation/fade_in_animation_model.dart';
 import 'package:login/src/constants/image_strings.dart';
 import 'package:login/src/constants/sizes.dart';
 import 'package:login/src/constants/text_strings.dart';
-import 'package:login/src/features/authentication/controllers/splash_screen_controller.dart';
+
+import '../../../../common_widgets/fade_in_animation/animation_design.dart';
 
 class SplashScreen extends StatelessWidget {
-  SplashScreen({super.key});
-
-  final splashController = Get.put(SplashScreenController());
+  const SplashScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    splashController.startAnimation();
+    final controller = FadeInAnimationController();
+    controller.startSplashAnimation();
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
 
     return Scaffold(
       body: Stack(
         children: [
-          Obx(
-            () => AnimatedPositioned(
-              duration: const Duration(milliseconds: 1600),
-              top: splashController.animate.value ? 0 : -30,
-              left: 0,
-              child: const SizedBox(
+          FadeInAnimation(
+            controller: controller,
+            durationMs: 1600,
+            animate: TAnimatePosition(topAfter: 0, topBefore: -30),
+            child: const SizedBox(
                 height: 50,
                 width: 50,
-                child: Image(
-                  image: AssetImage(splashTopIcon),
+                child: Image(image: AssetImage(splashTopIcon))),
+          ),
+          FadeInAnimation(
+            controller: controller,
+            durationMs: 1600,
+            animate: TAnimatePosition(
+              topAfter: 80,
+              topBefore: 80,
+              leftAfter: defaultSize,
+              leftBefore: -80,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text(
+                  appName,
+                  style: Theme.of(context).textTheme.headlineSmall,
                 ),
+                Text(
+                  appTagLine,
+                  style: Theme.of(context).textTheme.displaySmall,
+                )
+              ],
+            ),
+          ),
+          FadeInAnimation(
+            controller: controller,
+            durationMs: 2400,
+            animate: TAnimatePosition(
+              bottomAfter: height * 0.35,
+              bottomBefore: height * 0.35,
+              rightAfter: 0,
+              rightBefore: -200,
+            ),
+            child: SizedBox(
+              // height: height,
+              width: width,
+              child: const Image(
+                image: AssetImage(splashImage),
               ),
             ),
           ),
-          Obx(
-            () => AnimatedPositioned(
-              top: 80,
-              left: splashController.animate.value ? defaultSize : -80,
-              duration: const Duration(milliseconds: 1600),
-              child: AnimatedOpacity(
-                opacity: splashController.animate.value ? 1 : 0,
-                duration: const Duration(milliseconds: 1600),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text(
-                      appName,
-                      style: Theme.of(context).textTheme.headlineSmall,
-                    ),
-                    Text(
-                      appTagLine,
-                      style: Theme.of(context).textTheme.displaySmall,
-                    )
-                  ],
-                ),
-              ),
+          FadeInAnimation(
+            controller: controller,
+            durationMs: 2400,
+            animate: TAnimatePosition(
+              leftAfter: width * 0.25,
+              leftBefore: width * 0.25,
+              bottomAfter: 50,
+              bottomBefore: 0,
             ),
-          ),
-          Obx(
-            () => AnimatedPositioned(
-              bottom: height * 0.35,
-              right: splashController.animate.value
-                  ? 0
-                  : -200,
-              duration: const Duration(milliseconds: 2400),
-              child: AnimatedOpacity(
-                opacity: splashController.animate.value ? 1 : 0,
-                duration: const Duration(milliseconds: 2000),
-                child: SizedBox(
-                  // height: height,
-                  width: width,
-                  child: const Image(
-                    image: AssetImage(splashImage),
-                  ),
-                ),
-              ),
-            ),
-          ),
-          Obx(
-            () => AnimatedPositioned(
-              bottom: splashController.animate.value ? 50 : 0,
-              left: width * 0.25,
-              duration: const Duration(milliseconds: 2400),
-              child: SizedBox(
-                width: width * 0.5,
-                child: const Image(
-                  image: AssetImage(splashTitle),
-                ),
+            child: SizedBox(
+              // height: height,
+              width: width * 0.5,
+              child: const Image(
+                image: AssetImage(splashTitle),
               ),
             ),
           )
