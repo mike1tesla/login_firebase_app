@@ -7,3 +7,7 @@ const String splashTitle = "assets/images/splash/splash-screen-title.png";
 const String onboardingImage1 = "assets/images/onboarding/onboarding-screen-luxsa20.png";
 const String onboardingImage2 = "assets/images/onboarding/onboarding-screen-vf9.png";
 const String onboardingImage3 = "assets/images/onboarding/onboarding-screen-vf8.png";
+
+// Login screen image
+const String loginLogo = "assets/images/login/logo_vinfast_login.png";
+const String googleIcon = "assets/logo/google.svg";

@@ -7,6 +7,7 @@ import 'package:login/src/constants/sizes.dart';
 import 'package:login/src/constants/text_strings.dart';
 import 'package:login/src/features/authentication/controllers/onboarding_controller.dart';
 import 'package:login/src/features/authentication/models/model_onboarding.dart';
+import 'package:login/src/features/authentication/screens/login_screen/login_screen.dart';
 import 'package:login/src/features/authentication/screens/onboarding/onboarding_widget.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:get/get.dart';
@@ -95,7 +96,7 @@ class OnboardingScreen extends StatelessWidget {
                 children: [
                   Expanded(
                     child: OutlinedButton(
-                      onPressed: () {},
+                      onPressed: () => Get.to(const LoginScreen()),
                       child: Text(login.toUpperCase()),
                     ),
                   ),
