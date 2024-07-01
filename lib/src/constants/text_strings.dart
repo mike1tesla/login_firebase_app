@@ -3,6 +3,12 @@
 const String login = "Login";
 const String signup = "Signup";
 
+const String email = "Email";
+const String password = "Password";
+const String forgetPassword = "Forget Password";
+const String signInWithGoogle = "Sign-In with Google";
+const String dontHaveAnAccount = "Don't have an Account? ";
+
 // Splash
 const String appName = ".appable/";
 const String appTagLine = "Learn to code. \nFree for Everyone";

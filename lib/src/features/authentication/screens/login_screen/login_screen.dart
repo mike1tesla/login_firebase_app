@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:login/src/constants/image_strings.dart';
 import 'package:login/src/constants/sizes.dart';
-import 'package:login/src/constants/text_strings.dart';
+
+import 'login_footer_widget.dart';
+import 'login_form_widget.dart';
+import 'login_header_widget.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
+    final size = MediaQuery
+        .of(context)
+        .size;
     return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
@@ -16,18 +21,15 @@ class LoginScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                ///--- start section 1 ---
-                Center(
-                  child: SizedBox(
-                    width: size.width / 2,
-                    child: const Image(image: AssetImage(loginLogo)),
-                  ),
-                ),
-                const SizedBox(height: paddingSize),
-                Text(loginTitle, style: Theme.of(context).textTheme.displayLarge),
-                const SizedBox(height: paddingSize),
-                Text(loginSubtitle, style: Theme.of(context).textTheme.bodyLarge)
-                /// --- end section 1 ---
+
+                ///--- section 1 ---
+                LoginHeaderWidget(size: size),
+
+                ///--- section 2 ---
+                const LoginForm(),
+
+                ///--- section 3 ---
+                const LoginFooterWidget()
               ],
             ),
           ),
@@ -36,3 +38,4 @@ class LoginScreen extends StatelessWidget {
     );
   }
 }
+
