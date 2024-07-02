@@ -9,6 +9,7 @@ import 'package:login/src/features/authentication/controllers/onboarding_control
 import 'package:login/src/features/authentication/models/model_onboarding.dart';
 import 'package:login/src/features/authentication/screens/login_screen/login_screen.dart';
 import 'package:login/src/features/authentication/screens/onboarding/onboarding_widget.dart';
+import 'package:login/src/features/authentication/screens/signup_screen/signup_screen.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:get/get.dart';
 
@@ -103,7 +104,7 @@ class OnboardingScreen extends StatelessWidget {
                   const SizedBox(width: defaultSize),
                   Expanded(
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: ()=> Get.to(const SignupScreen()),
                       child: Text(signup.toUpperCase()),
                     ),
                   ),

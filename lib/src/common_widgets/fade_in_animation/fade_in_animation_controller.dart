@@ -12,7 +12,7 @@ class FadeInAnimationController {
     await Future.delayed(const Duration(milliseconds: 3000));
     animate.value = false;
     await Future.delayed(const Duration(milliseconds: 3000));
-    Get.off( OnboardingScreen());
+    Get.off(OnboardingScreen());
   }
   ///chuc nang cho Animation bat ki
   Future startAnimation() async {

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../constants/image_strings.dart';
-import '../../../../constants/sizes.dart';
-import '../../../../constants/text_strings.dart';
+import '../../../../../constants/image_strings.dart';
+import '../../../../../constants/sizes.dart';
+import '../../../../../constants/text_strings.dart';
 
-class LoginFooterWidget extends StatelessWidget {
-  const LoginFooterWidget({
+class SignUpFooterWidget extends StatelessWidget {
+  const SignUpFooterWidget({
     super.key,
   });
 
@@ -15,8 +15,7 @@ class LoginFooterWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        const Text("Or"),
-        const SizedBox(height: paddingSize),
+        const SizedBox(height: 8),
         SizedBox(
           width: double.infinity,
           child: OutlinedButton.icon(
@@ -28,17 +27,17 @@ class LoginFooterWidget extends StatelessWidget {
             label: const Text(signInWithGoogle),
           ),
         ),
-        const SizedBox(height: paddingSize - 8),
+        const SizedBox(height: paddingSize - 10),
         TextButton(
           onPressed: () {},
           style: TextButton.styleFrom(foregroundColor: Colors.grey),
           child: Text.rich(
             TextSpan(
-                text: dontHaveAnAccount,
+                text: alreadyHaveAnAccount,
                 style: Theme.of(context).textTheme.bodyLarge,
                 children: const [
                   TextSpan(
-                    text: signup,
+                    text: login,
                     style: TextStyle(color: Colors.blue),
                   )
                 ]),
