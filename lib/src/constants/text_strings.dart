@@ -1,5 +1,7 @@
 
 // Generic text
+import 'package:flutter/cupertino.dart';
+
 const String login = "Login";
 const String signup = "Signup";
 
@@ -28,9 +30,17 @@ const String loginSubtitle = "Việt Nam – Phong cách – An toàn – Sáng 
 const String rememberMe = "Remember Me";
 const String dontHaveAnAccount = "Don't have an Account? ";
 
-//Sign Up screen
-const signUpTitle = "Mãnh liệt tinh thần Việt Nam";
-const signUpSubTitle = "Việt Nam – Phong cách – An toàn – Sáng tạo – Tiên phong";
+// Sign Up screen
+const String signUpTitle = "Mãnh liệt tinh thần Việt Nam";
+const String signUpSubTitle = "Việt Nam – Phong cách – An toàn – Sáng tạo – Tiên phong";
 const String alreadyHaveAnAccount = "Already have an Account? ";
 
+// Forget password
+const String forgetPasswordTitle = "Make Selection!";
+const String forgetPasswordSubTitle = "Select one of the options given below ti reset your password.";
+const String resetViaEmail = "Reset via E-Mail Verification.";
+const String resetViaPhone = "Reset via Phone Verification.";
+
+const String forgetPhoneSubTitle = "Enter your registered Phone No to receive OTP";
+const String forgetMailSubTitle = "Enter your registered E-Mail to receive OTP";
 

@@ -46,6 +46,7 @@ flutter:
     - assets/images/splash/
     - assets/images/onboarding/
     - assets/images/login/
+    - assets/images/forget_password/
     - assets/logo/
 
   # fonts:
