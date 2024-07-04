@@ -1,7 +1,5 @@
 
 // Generic text
-import 'package:flutter/cupertino.dart';
-
 const String login = "Login";
 const String signup = "Signup";
 
@@ -43,4 +41,9 @@ const String resetViaPhone = "Reset via Phone Verification.";
 
 const String forgetPhoneSubTitle = "Enter your registered Phone No to receive OTP";
 const String forgetMailSubTitle = "Enter your registered E-Mail to receive OTP";
+
+// OTP Screen
+const String otpTitle = "CODE";
+const String otpSubtitle = "Verification";
+const String otpMessage = "Enter verification code sent at ";
 

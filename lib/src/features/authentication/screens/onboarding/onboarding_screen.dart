@@ -63,7 +63,7 @@ class OnboardingScreen extends StatelessWidget {
                             autoPlay: true,
                             viewportFraction: 1,
                             onPageChanged: (index, _) =>
-                                controller.updatePageIndicator(index)),
+                                controller.updatePageIndicator(index),),
                         items: pages,
                       ),
                     ],
@@ -104,7 +104,7 @@ class OnboardingScreen extends StatelessWidget {
                   const SizedBox(width: defaultSize),
                   Expanded(
                     child: ElevatedButton(
-                      onPressed: ()=> Get.to(const SignupScreen()),
+                      onPressed: () => Get.to(const SignupScreen()),
                       child: Text(signup.toUpperCase()),
                     ),
                   ),

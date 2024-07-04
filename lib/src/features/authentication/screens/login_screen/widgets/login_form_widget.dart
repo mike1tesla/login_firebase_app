@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:login/src/features/authentication/screens/forget_password/forget_password_mail/forget_password_mail.dart';
 
 import '../../../../../constants/sizes.dart';
 import '../../../../../constants/text_strings.dart';
@@ -65,17 +66,20 @@ class LoginForm extends StatelessWidget {
                           ),
                           const SizedBox(height: defaultSize),
                           ForgetPasswordBtnWidget(
+                            onTap: () {
+                              Navigator.pop(context);
+                              Get.to(const ForgetPasswordMailScreen());
+                            },
                             icon: Icons.mail_outline_rounded,
                             titleBtn: email,
                             resetVia: resetViaEmail,
-                            onTap: (){},
                           ),
                           const SizedBox(height: paddingSize),
                           ForgetPasswordBtnWidget(
+                            onTap: () {},
                             icon: Icons.mobile_friendly_outlined,
                             titleBtn: phoneNumber,
                             resetVia: resetViaPhone,
-                            onTap: () {},
                           )
                         ],
                       ),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
+import 'package:login/src/features/authentication/screens/signup_screen/signup_screen.dart';
 
 import '../../../../../constants/image_strings.dart';
 import '../../../../../constants/sizes.dart';
@@ -16,7 +18,7 @@ class LoginFooterWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         const Text("Or"),
-        const SizedBox(height: paddingSize),
+        const SizedBox(height: paddingSize - 10),
         SizedBox(
           width: double.infinity,
           child: OutlinedButton.icon(
@@ -30,18 +32,19 @@ class LoginFooterWidget extends StatelessWidget {
         ),
         const SizedBox(height: paddingSize - 8),
         TextButton(
-          onPressed: () {},
+          onPressed: () => Get.off(const SignupScreen()),
           style: TextButton.styleFrom(foregroundColor: Colors.grey),
           child: Text.rich(
             TextSpan(
-                text: dontHaveAnAccount,
-                style: Theme.of(context).textTheme.bodyLarge,
-                children: const [
-                  TextSpan(
-                    text: signup,
-                    style: TextStyle(color: Colors.blue),
-                  )
-                ]),
+              text: dontHaveAnAccount,
+              style: Theme.of(context).textTheme.bodyLarge,
+              children: const [
+                TextSpan(
+                  text: signup,
+                  style: TextStyle(color: Colors.blue),
+                )
+              ],
+            ),
           ),
         )
       ],

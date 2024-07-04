@@ -22,6 +22,7 @@ class SignupScreen extends StatelessWidget {
                   image: loginLogo,
                   title: signUpTitle,
                   subtitle: signUpSubTitle,
+                  heightBetween: paddingSize - 10,
                 ),
                 SizedBox(height: spaceInputForm),
                 SignUpFormWidget(),

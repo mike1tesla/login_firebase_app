@@ -3,14 +3,18 @@ import 'package:flutter/material.dart';
 import '../../constants/sizes.dart';
 
 class HeaderWidget extends StatelessWidget {
+
   const HeaderWidget({
     super.key,
     required this.image,
     required this.title,
     required this.subtitle,
+    this.heightBetween
   });
 
   final String image, title, subtitle;
+  final double? heightBetween;
+
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +28,7 @@ class HeaderWidget extends StatelessWidget {
             child: Image(image: AssetImage(image)),
           ),
         ),
-        const SizedBox(height: paddingSize - 10),
+        SizedBox(height: heightBetween),
         Text(
           title,
           style: Theme.of(context).textTheme.displaySmall,

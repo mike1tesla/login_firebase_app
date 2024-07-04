@@ -14,3 +14,4 @@ const String googleIcon = "assets/logo/google.svg";
 
 // Forget Password image
 const String forgetPasswordImg = "assets/images/forget_password/lock_key.png";
+const String forgetPasswordMail = "assets/images/forget_password/forget_password_mail.png";

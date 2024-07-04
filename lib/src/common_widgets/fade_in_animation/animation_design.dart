@@ -21,7 +21,7 @@ class FadeInAnimation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Obx(() {
-      print(controller.animate.value);
+      // print(controller.animate.value);
       return AnimatedPositioned(
         duration: Duration(milliseconds: durationMs),
         top: controller.animate.value ? animate!.topAfter : animate!.topBefore,

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
+import 'package:login/src/features/authentication/screens/login_screen/login_screen.dart';
 
 import '../../../../../constants/image_strings.dart';
 import '../../../../../constants/sizes.dart';
@@ -29,7 +31,7 @@ class SignUpFooterWidget extends StatelessWidget {
         ),
         const SizedBox(height: paddingSize - 10),
         TextButton(
-          onPressed: () {},
+          onPressed: () => Get.off(const LoginScreen()),
           style: TextButton.styleFrom(foregroundColor: Colors.grey),
           child: Text.rich(
             TextSpan(
