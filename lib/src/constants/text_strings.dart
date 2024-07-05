@@ -47,3 +47,11 @@ const String otpTitle = "CODE";
 const String otpSubtitle = "Verification";
 const String otpMessage = "Enter verification code sent at ";
 
+// Dashboard
+const String dashboardBannerTitle = "Android for Beginners";
+const String dashboardBannerSubtitle = "10 lessons";
+const String dashboardBtn = "View All";
+const String dashboardTopCourse = "Top Course";
+
+
+

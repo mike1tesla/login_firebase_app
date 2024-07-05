@@ -4,6 +4,7 @@ import 'package:login/src/features/authentication/screens/forget_password/forget
 
 import '../../../../../constants/sizes.dart';
 import '../../../../../constants/text_strings.dart';
+import '../../../../core/screens/dashboard/dashboard.dart';
 import '../../forget_password/forget_password_options/forget_password_btn_widget.dart';
 
 class LoginForm extends StatelessWidget {
@@ -93,7 +94,7 @@ class LoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () => Get.to(const Dashboard()),
                 child: Text(
                   login.toUpperCase(),
                 ),
