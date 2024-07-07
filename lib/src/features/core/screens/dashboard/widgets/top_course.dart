@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:login/src/constants/sizes.dart';
 import 'package:login/src/features/core/models/dashboard/course_model.dart';
+import 'package:login/src/utils/theme/theme.dart';
 
 import '../../../../../constants/colors.dart';
 import '../../../../../constants/image_strings.dart';
@@ -29,7 +30,7 @@ class TopCourse extends StatelessWidget {
             padding: const EdgeInsets.only(right: paddingSize),
             child: Container(
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30), color: cardBgColor),
+                  borderRadius: BorderRadius.circular(30), color: Theme.of(context).colorScheme.myColor),
               padding: const EdgeInsets.all(10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -40,7 +41,7 @@ class TopCourse extends StatelessWidget {
                       Flexible(
                           child: Text(
                         list[i].courseTitle,
-                        style: textTheme.headline4,
+                        style: textTheme.headlineMedium,
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                       )),
@@ -54,7 +55,7 @@ class TopCourse extends StatelessWidget {
                   Row(
                     children: [
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: (){},
                         style: ElevatedButton.styleFrom(
                           shape: const CircleBorder(),
                         ),
@@ -66,18 +67,18 @@ class TopCourse extends StatelessWidget {
                         children: [
                           Text(
                             list[i].courseSection,
-                            style: textTheme.headline4,
+                            style: textTheme.headlineMedium,
                             overflow: TextOverflow.ellipsis,
                           ),
                           Text(
                             list[i].courseDescription,
-                            style: textTheme.bodyText2,
+                            style: textTheme.bodyMedium,
                             overflow: TextOverflow.ellipsis,
                           ),
                         ],
                       )
                     ],
-                  )
+                  ),
                 ],
               ),
             ),

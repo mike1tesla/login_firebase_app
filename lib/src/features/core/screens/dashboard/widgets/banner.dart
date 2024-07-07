@@ -34,21 +34,32 @@ class BannerBox extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 30),
-                Text(dashboardBannerTitle, style: textTheme.headline4, maxLines: 2, overflow: TextOverflow.ellipsis,),
-                Text(dashboardBannerSubtitle, style: textTheme.bodyText2,maxLines: 1,overflow: TextOverflow.ellipsis,)
+                Text(
+                  dashboardBannerTitle,
+                  style: textTheme.headline4,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
+                Text(
+                  dashboardBannerSubtitle,
+                  style: textTheme.bodyText2,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                )
               ],
             ),
           ),
         ),
         const SizedBox(width: paddingSize),
-
         Expanded(
           child: Column(
             children: [
               Container(
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30), color: cardBgColor),
-                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+                    borderRadius: BorderRadius.circular(30),
+                    color: cardBgColor),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -56,22 +67,30 @@ class BannerBox extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Icon(Icons.bookmark),
-                        Flexible(child: Image(image: AssetImage(bannerAndroid))),
+                        Flexible(
+                            child: Image(image: AssetImage(bannerAndroid))),
                       ],
                     ),
-                    Text("JAVA", style: textTheme.headline4, overflow: TextOverflow.ellipsis,),
-                    Text(dashboardBannerSubtitle, style: textTheme.bodyText2,overflow: TextOverflow.ellipsis,),
+                    Text(
+                      "JAVA",
+                      style: textTheme.headline4,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    Text(
+                      dashboardBannerSubtitle,
+                      style: textTheme.bodyText2,
+                      overflow: TextOverflow.ellipsis,
+                    ),
                   ],
                 ),
               ),
               SizedBox(
                 width: double.infinity,
                 child: OutlinedButton(
-                  onPressed: (){},
+                  onPressed: () {},
                   style: OutlinedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30)
-                      )
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30)),
                   ),
                   child: const Text(dashboardBtn),
                 ),
@@ -79,7 +98,6 @@ class BannerBox extends StatelessWidget {
             ],
           ),
         ),
-
       ],
     );
   }
