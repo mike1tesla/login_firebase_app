@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "962150327569",
+    "project_id": "flutter-login-app-cb497",
+    "storage_bucket": "flutter-login-app-cb497.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:962150327569:android:bf96bb8f34aec418a598b0",
+        "android_client_info": {
+          "package_name": "vn.mike.login"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwnH28fFq1GKpOZfm5oAvRXsUNKbh_F6w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
