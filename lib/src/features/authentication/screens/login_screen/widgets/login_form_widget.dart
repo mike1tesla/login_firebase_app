@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:login/src/features/authentication/controllers/signin_controller.dart';
 import 'package:login/src/features/authentication/screens/forget_password/forget_password_mail/forget_password_mail.dart';
 
 import '../../../../../constants/sizes.dart';
@@ -14,13 +15,17 @@ class LoginForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(SignInController());
+    final _fromKey = GlobalKey<FormState>();
     return Form(
+      key: _fromKey,
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: paddingSize),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             TextFormField(
+              controller: controller.email,
               decoration: InputDecoration(
                 prefixIcon: const Icon(Icons.person_outline_outlined),
                 labelText: email,
@@ -31,6 +36,7 @@ class LoginForm extends StatelessWidget {
             ),
             const SizedBox(height: paddingSize),
             TextFormField(
+              controller: controller.password,
               decoration: InputDecoration(
                 prefixIcon: const Icon(Icons.fingerprint),
                 labelText: password,
@@ -94,7 +100,13 @@ class LoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () => Get.to(const Dashboard()),
+                onPressed: () {
+                  // check TextFormField co dung dinh dang hay k, sd validator()
+                  if(_fromKey.currentState!.validate()){
+                    // Thuc hien Register User
+                    SignInController.instance.loginUser(controller.email.text.trim(), controller.password.text.trim());
+                  }
+                },
                 child: Text(
                   login.toUpperCase(),
                 ),
