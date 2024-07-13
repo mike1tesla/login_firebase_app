@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:login/src/features/authentication/controllers/signup_controller.dart';
+import 'package:login/src/features/authentication/screens/forget_password/forget_password_otp/otp_screen.dart';
 
 import '../../../../../constants/sizes.dart';
 import '../../../../../constants/text_strings.dart';
+import '../../forget_password/forget_password_otp/otp_dialog.dart';
 
 class SignUpFormWidget extends StatelessWidget {
   const SignUpFormWidget({
@@ -60,7 +62,9 @@ class SignUpFormWidget extends StatelessWidget {
                 // check TextFormField co dung dinh dang hay k, sd validator()
                 if(_fromKey.currentState!.validate()){
                   // Thuc hien Register User
-                  SignUpController.instance.registerUser(controller.email.text.trim(), controller.password.text.trim());
+                  // SignUpController.instance.registerUser(controller.email.text.trim(), controller.password.text.trim());
+                  SignUpController.instance.phoneAuthentication(controller.phoneNumber.text.trim());
+                  otpDialog(context);
                 }
               },
               child: Text(signup.toUpperCase()),

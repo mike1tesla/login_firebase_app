@@ -5,8 +5,11 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../../constants/sizes.dart';
 import '../../../../../constants/text_strings.dart';
+import '../../../controllers/otp_controller.dart';
 
 Future<dynamic> otpDialog(BuildContext context) {
+  var otp;
+  Get.put(OTPController());
   return Get.defaultDialog(
     title: otpTitle,
     titleStyle: GoogleFonts.montserrat(
@@ -30,6 +33,8 @@ Future<dynamic> otpDialog(BuildContext context) {
           fillColor: Colors.black.withOpacity(0.1),
           filled: true,
           onSubmit: (code) {
+            otp = code;
+            OTPController.instance.verifyOTP(otp);
             print("OTP is => $code");
           },
         ),
@@ -38,7 +43,9 @@ Future<dynamic> otpDialog(BuildContext context) {
     confirm: SizedBox(
       width: double.infinity,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          OTPController.instance.verifyOTP(otp);
+        },
         child: const Text('Next'),
       ),
     ),
