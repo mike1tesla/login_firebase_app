@@ -53,5 +53,29 @@ const String dashboardBannerSubtitle = "10 lessons";
 const String dashboardBtn = "View All";
 const String dashboardTopCourse = "Top Course";
 
+//Profile
+//Text
+const String profile = "Profile";
+const String editProfile = "Edit Profile";
+const String logoutDialogHeading = "Logout";
+const String profileHeading = "M1ke Tesla";
+const String profileSubHeading = "admin@gmail.com";
+//Menu
+const String menu5 = logoutDialogHeading;
+const String menu1 = "Settings";
+const String menu2 = "Billing Details";
+const String menu3 = "User Management";
+const String menu4 = "Information";
+
+//Update Profile
+const String delete = "Delete";
+const String joined = "Joined";
+const String joinedAt = "21/07/2024";
+
+
+
+
+
+
 
 

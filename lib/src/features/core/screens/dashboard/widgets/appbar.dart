@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:login/src/features/core/screens/profile/profile_screen.dart';
 import 'package:login/src/repository/authentication_repositiory/authentications_repository.dart';
 
 import '../../../../../constants/text_strings.dart';
@@ -27,7 +29,7 @@ class DashboardAppBar extends StatelessWidget implements PreferredSizeWidget {
           ),
           child: IconButton(
             onPressed: () {
-              AuthenticationRepository.instance.logout();
+              Get.to(const ProfileScreen());
             },
             icon: const Icon(Icons.person_outline_rounded),
           ),

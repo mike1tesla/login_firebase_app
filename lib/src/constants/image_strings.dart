@@ -19,3 +19,6 @@ const String forgetPasswordMail = "assets/images/forget_password/forget_password
 // Dashboard img
 const String bannerAndroid = "assets/images/dashboard/banner_android.png";
 const String birdFlutter = "assets/images/dashboard/bird_flutter.png";
+
+//Profile
+const String avatarProfile = "assets/images/profile/profile_man.png";
