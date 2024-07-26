@@ -69,8 +69,8 @@ const String menu4 = "Information";
 
 //Update Profile
 const String delete = "Delete";
-const String joined = "Joined";
-const String joinedAt = "21/07/2024";
+const String joined = "Joined ";
+const String joinedAt = " 21-07-2024";
 
 
 
